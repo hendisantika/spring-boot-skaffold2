@@ -35,7 +35,7 @@ jib {
     }
     to {
         image = 'hendisantika/spring-skaffold'
-        tags = ['tag2', 'latest', 'v1.0.1']
+        tags = ['latest', 'v1.0.1']
     }
     container {
         jvmFlags = ['-Dmy.property=example.value', '-Xms512m', '-Xdebug']
