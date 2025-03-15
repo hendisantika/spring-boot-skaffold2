@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: myapp
+  name: spring-skaffold
 spec:
   selector:
     matchLabels:
-      app: myapp
+      app: spring-skaffold
   template:
     metadata:
       labels:
-        app: myapp
+        app: spring-skaffold
     spec:
       containers:
-        - name: myapp
-          image: hendisantika/myapp
+        - name: spring-skaffold
+          image: hendisantika/spring-skaffold
           envFrom:
             - configMapRef:
-                name: myapp-envs
+                name: spring-skaffold-envs
           ports:
             - containerPort: 8080
       imagePullSecrets:
