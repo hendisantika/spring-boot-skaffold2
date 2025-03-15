@@ -34,14 +34,14 @@ jib {
         image = 'amazoncorretto:23-alpine'
     }
     to {
-        image = 'hendisantika/spring-sfaffold'
-        tags = ['tag2', 'latest', 'v1.0.0']
+        image = 'hendisantika/spring-skaffold'
+        tags = ['tag2', 'latest', 'v1.0.1']
     }
     container {
         jvmFlags = ['-Dmy.property=example.value', '-Xms512m', '-Xdebug']
         mainClass = 'id.my.hendisantika.skaffold2.SpringBootSkaffold2Application'
         args = ['some', 'args']
-        ports = ['8080']
+        ports = ['8080', '8080/tcp']
         labels = [key1: 'value1', key2: 'value2']
         format = 'OCI'
     }
