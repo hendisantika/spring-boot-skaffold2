@@ -10,7 +10,7 @@ version = '0.0.1'
 
 java {
     toolchain {
-        languageVersion = JavaLanguageVersion.of(23)
+        languageVersion = JavaLanguageVersion.of(25)
     }
 }
 
@@ -31,7 +31,7 @@ tasks.named('test') {
 
 jib {
     from {
-        image = 'amazoncorretto:23-alpine'
+        image = 'amazoncorretto:25-alpine'
     }
     to {
         image = 'hendisantika/spring-skaffold'
